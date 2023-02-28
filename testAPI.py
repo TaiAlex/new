@@ -7,8 +7,6 @@ from pydub.utils import which
 import pandas as pd
 import json
 
-pydub.AudioSegment.converter = which("ffmpeg")
-
 def split_list_answer(text_path, answer):
     col_answer = []
     col_index = []
