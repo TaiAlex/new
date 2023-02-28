@@ -10,14 +10,6 @@ def now_utc():
     now = now.replace(tzinfo=pytz.utc)
     return now
 
-print(now_utc)
-# def str_yyyy_mm_from_int(year, month, space = '-'):
-#     if month < 10:
-#         str_month = '0'+ str(month)
-#     else:
-#         str_month = str(month)
-#     return str(year) + space + str_month
-
 def str_yyyy_mm_dd(time: datetime = now_utc(), space = "-"):
     str_year = str(time.year)
     if time.month < 10:
@@ -29,14 +21,6 @@ def str_yyyy_mm_dd(time: datetime = now_utc(), space = "-"):
     else:
         str_day = str(time.day)
     return str_day + space + str_month + space + str_year
-
-# def str_yyyy_mm(time = now_utc(), space = "-"):
-#     str_year = str(time.year)
-#     if time.month < 10:
-#         str_month = '0'+ str(time.month)
-#     else:
-#         str_month = str(time.month)
-#     return  str_year + space + str_month
 
 def create_path(path_dir):
     if path.exists(path_dir):
